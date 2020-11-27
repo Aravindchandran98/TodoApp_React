@@ -1,0 +1,11 @@
+section > article {
+  margin: 220px auto;
+}
+article > h1 {
+  background-color: #5191d7;
+}
+#tickimage {
+  height: 45px;
+  width: 50px;
+  margin-left: 20px;
+}

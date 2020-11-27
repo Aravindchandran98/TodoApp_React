@@ -1,0 +1,9 @@
+.form-title {
+  background-color: transparent;
+}
+.registerform {
+  background-color: #e9ecef;
+  width: 30%;
+  height: 500px;
+  border-radius: 5px !important;
+}

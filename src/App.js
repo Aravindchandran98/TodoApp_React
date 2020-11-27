@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import "./App.css"
+import HeaderComponent from './Component/HeaderComponent/HeaderBlock';
+import HomeBlockComponent from './Component/HomeBlock/HomeBlockComponent';
+import LoginComponent from './Component/LoginBlock/LoginComponent';
+import RegisterComponent from './Component/RegisterBlock/RegisterComponent';
+import { BrowserRouter as Router,Route,Switch } from "react-router-dom";
+import TodoItems from './Component/Todos/TodoItems';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {  }
+    }
+    render() { 
+        return ( 
+            
+            <Fragment>
+                <HeaderComponent/>
+                {/* <HomeBlockComponent/> */}
+                <Switch>
+                <Route path="/" exact component={HomeBlockComponent}/>
+                <Route path="/register" exact component={RegisterComponent}/>
+                <Route path="/login" exact component={LoginComponent}/>
+                <Route path="/todo" exact component= {TodoItems}/>
+                </Switch>
+                {/* <HomeBlockComponent/> */}
+                {/* <RegisterComponent/>
+                <LoginComponent/> */}
+            </Fragment>
+            
+         );
+    }
 }
-
+ 
 export default App;
